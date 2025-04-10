@@ -14,7 +14,7 @@ To make clear what is expected, everyone participating in this project
 is required to conform to the Code of Conduct.  This Code of Conduct applies to
 in-person and online meetings, email communication, and online forums such as Piazza and GitHub.
 
-## The Group 2 Code of Conduct
+## Animal Shelter Data Analysis Code of Conduct
 We are dedicated to providing a welcoming and supportive
 environment for all people, regardless of background or identity. As such, we
 do not tolerate behaviour that is disrespectful to our teachers or learners or
