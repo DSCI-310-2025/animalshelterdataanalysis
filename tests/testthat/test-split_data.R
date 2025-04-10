@@ -1,5 +1,7 @@
 library(testthat)
 
+source("helper/helper-split_data.R")
+
 test_that("split_data should return two dataframes with sizes in proportion
 to each other equal to prop", {
   expect_equal(c(nrow(split_data(test_frame, 0.6, 'index', 1)[[1]]),
