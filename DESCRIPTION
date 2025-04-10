@@ -20,6 +20,7 @@ Depends:
     tidymodels,
     tidyverse
 Suggests: 
+    covr,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
