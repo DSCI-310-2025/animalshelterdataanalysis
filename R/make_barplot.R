@@ -1,6 +1,4 @@
-#' Generate a Proportional Stacked Bar Plot showing the proportion of a categorical variable (`x`)
-#' grouped by another categorical variable (`class`). The plot uses relative
-#' proportions (i.e., stacked bars summing to 100%) and includes axis labels.
+#' Generate a Proportional Stacked Bar Plot
 #'
 #' @param dataset A data frame containing the data to be plotted.
 #' @param x A string specifying the name of the categorical variable to be plotted on the x-axis.
