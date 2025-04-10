@@ -7,16 +7,17 @@
 #' @param name The name of the CSV file to be written.
 #'
 #' @return Writes a new CSV file to the specified folder.
+#' @export
 #'
 #' @examples
-#' # Example usage:
+#' \dontrun{
 #' make_table(data_cols, folder = "path/to/folder", name = "output.csv")
-#' @export
+#' }
 
 
 library(readr)
 
 make_table <- function(data_cols, folder, name) {
   table <- table(data_cols)
-  write_csv(as.data.frame(table), file = paste(folder, "/", name, sep = ""))
+  readr::write_csv(as.data.frame(table), file = paste(folder, "/", name, sep = ""))
 }

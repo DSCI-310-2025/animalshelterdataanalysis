@@ -11,17 +11,23 @@
 #' @export
 #'
 #' @examples
+#'  \dontrun{
 #' # Example of cleaning the animal shelter data
 #' raw_data <- read_csv("animal_shelter_raw.csv")
 #' cleaned_data <- clean_animal_shelter_data(raw_data)
+#' }
+#' @importFrom magrittr %>%
+#' @importFrom readr read_csv
+#' @importFrom dplyr recode
 
 library(tidyverse)
 library(readr)
 library(dplyr)
 
 clean_animal_shelter_data <- function(df) {
+  # Select only relevant columns
   df <- df %>%
-    select(animal_type, primary_color, sex, dob, intake_condition, intake_type, intake_date, outcome_date, outcome_type) %>%
+    dplyr::select(animal_type, primary_color, sex, dob, intake_condition, intake_type, intake_date, outcome_date, outcome_type) %>%
     na.omit()
 
   df$outcome_group <- recode(df$outcome_type,
@@ -33,6 +39,7 @@ clean_animal_shelter_data <- function(df) {
                              "euthanasia" = "Not Adopted",
                              .default = "Not Adopted")
 
+  # convert dob column to age column
   df$age_at_intake <- as.numeric(difftime(Sys.Date(), df$dob, units = "days")) / 365
 
   return(df)

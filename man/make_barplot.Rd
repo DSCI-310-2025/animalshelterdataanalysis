@@ -3,9 +3,6 @@
 \name{make_barplot}
 \alias{make_barplot}
 \title{Generate a Proportional Stacked Bar Plot}
-\usage{
-make_barplot(dataset, x, x_name, class, class_name)
-}
 \arguments{
 \item{dataset}{A data frame containing the data to be plotted.}
 
@@ -25,6 +22,7 @@ Generate a Proportional Stacked Bar Plot showing the proportion of a categorical
 The plot uses relative proportions (i.e., stacked bars summing to 100\%) and includes axis labels.
 }
 \examples{
+ \dontrun{
 # Example of creating a proportional stacked bar plot
 library(ggplot2)
 data <- data.frame(
@@ -33,4 +31,5 @@ data <- data.frame(
 )
 make_barplot(data, x = "animal_type", x_name = "Animal Type",
              class = "outcome_group", class_name = "Outcome Group")
+}
 }
