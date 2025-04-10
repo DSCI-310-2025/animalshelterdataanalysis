@@ -3,9 +3,9 @@
 library(readr)
 library(testthat)
 
-test_output1 <- read_csv("make_table_test_data1.csv")
-test_output2 <- read_csv("make_table_test_data2.csv")
-test_output3 <- read_csv("make_table_test_data3.csv")
+test_output1 <- read_csv("data/make_table_test_data1.csv")
+test_output2 <- read_csv("data/make_table_test_data2.csv")
+test_output3 <- read_csv("data/make_table_test_data3.csv")
 
 test_that("a csv file exists when no data is input, the csv has no data in it",
           {
