@@ -1,6 +1,4 @@
-#' Split a Data Frame into Training and Testing Sets by using `initial_split()` from the
-#' `rsample` package (via `tidymodels`) to split a data frame into training and
-#' testing sets.
+#' Split a Data Frame into Training and Testing Sets
 #'
 #' @param df A data frame to be split.
 #' @param prop A number between 0 and 1 specifying the proportion of the data to be used for training.

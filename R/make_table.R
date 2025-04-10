@@ -1,6 +1,4 @@
-# @author Nolan Vibhakar
-# creates a table using the given data columns, then writes it to the given
-# folder as a csv file with the given name.
+# Create a table using the given data columns, then writes it to the given folder as a csv file with the given name.
 #
 # @param data_cols -dataframe or individual column or columns of a dataframe
 # @param folder -the folder and path to write the file to
