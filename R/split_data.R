@@ -17,13 +17,21 @@
 #'
 #' @examples
 #' \dontrun{
-library(tidymodels)
-df <- data.frame(
-   age = c(2, 3, 4, 5, 6, 7, 8, 9),
-   outcome_group = rep(c("Adopted", "Not Adopted"), 4)
- )
+#'library(tidymodels)
+#'df <- data.frame(
+#'   age = c(2, 3, 4, 5, 6, 7, 8, 9),
+#'   outcome_group = rep(c("Adopted", "Not Adopted"), 4)
+#' )
 
-split <- split_data(df, prop = 0.75, strata = "outcome_group", seed = 123)
- train_data <- split[[1]]
- test_data <- split[[2]]
- }
+#'split <- split_data(df, prop = 0.75, strata = "outcome_group", seed = 123)
+#' train_data <- split[[1]]
+#' test_data <- split[[2]]
+library(tidymodels)
+
+split_data <- function(df,prop,strata, seed){
+  set.seed(seed)
+  data_split <- initial_split(df, prop=prop, strata=strata)
+  train <- training(data_split)
+  test <- testing(data_split)
+  return(list(train, test))
+}
