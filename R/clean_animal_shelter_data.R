@@ -18,7 +18,6 @@
 library(tidyverse)
 library(readr)
 library(dplyr)
-library(docopt)
 
 clean_animal_shelter_data <- function(df) {
   df <- df %>%
