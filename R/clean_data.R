@@ -1,4 +1,4 @@
-#' Cleaning the Animal Shelter dataset by selecting relevant columns,
+#' Cleaning the Animal Shelter dataset by selecting the relevant columns,
 #' recoded outcome types to only 2 options, and converted dob column to age column
 #'
 #' @param df A data frame containing animal shelter data
