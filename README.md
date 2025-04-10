@@ -2,6 +2,8 @@
 # animalshelterdataanalysis
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/DSCI-310-2025/animalshelterdataanalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/animalshelterdataanalysis/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/DSCI-310-2025/animalshelterdataanalysis/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/animalshelterdataanalysis)
 <!-- badges: end -->
 
 The goal of the `animalshelterdataanalysis` package is to provide a set of functions for cleaning, analyzing, and visualizing animal shelter data. This package includes tools to preprocess raw shelter data, such as cleaning and transforming variables like `outcome_type` and `age_at_intake`, creating visualizations like proportional stacked bar plots, and exporting summary tables in CSV format. The functions are designed to support data analysis pipelines in animal shelter data projects, enabling easy exploration of trends, distributions, and relationships in the data.
