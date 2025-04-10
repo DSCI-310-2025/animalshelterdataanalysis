@@ -1,17 +1,19 @@
-#' Cleaning the Animal Shelter Dataset by selecting the relevant columns, recoding outcome types, and converting dab column
+#' @name clean_animal_shelter_data
+#' @title Clean Animal Shelter Data
+#' @description Cleaning the Animal Shelter dataset by selecting the relevant columns,
+#'   recoding outcome types to only 2 options, and converting the `dob` column to `age_at_intake`.
 #'
-#' @param df A data frame containing animal shelter data
+#' @param df A data frame containing animal shelter data.
 #'
 #' @return A cleaned data frame with selected columns and additional variables:
-#' `outcome_group` and `age_at_intake`.
+#'   `outcome_group` and `age_at_intake`.
 #'
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' # Example of cleaning the animal shelter data
 #' raw_data <- read_csv("animal_shelter_raw.csv")
 #' cleaned_data <- clean_animal_shelter_data(raw_data)
-#' }
 
 library(tidyverse)
 library(readr)
