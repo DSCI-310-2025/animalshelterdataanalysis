@@ -36,8 +36,8 @@ library(tidymodels)
 
 split_data <- function(df, prop, strata, seed) {
   set.seed(seed)
-  data_split <- initial_split(df, prop = prop, strata = !!rlang::sym(strata))
-  train <- training(data_split)
-  test <- testing(data_split)
+  data_split <- rsample::initial_split(df, prop = prop, strata = !!rlang::sym(strata))
+  train <- rsample::training(data_split)
+  test <- rsample::testing(data_split)
   return(list(train = train, test = test))
 }

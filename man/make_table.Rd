@@ -17,6 +17,7 @@ Writes a new CSV file to the specified folder.
 Creates a table using the given data columns and writes it to the specified folder as a CSV file.
 }
 \examples{
-# Example usage:
+\dontrun{
 make_table(data_cols, folder = "path/to/folder", name = "output.csv")
+}
 }

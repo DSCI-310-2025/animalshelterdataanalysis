@@ -15,7 +15,9 @@ Cleaning the Animal Shelter dataset by selecting the relevant columns,
 recoding outcome types to only 2 options, and converting the \code{dob} column to \code{age_at_intake}.
 }
 \examples{
+ \dontrun{
 # Example of cleaning the animal shelter data
 raw_data <- read_csv("animal_shelter_raw.csv")
 cleaned_data <- clean_animal_shelter_data(raw_data)
+}
 }

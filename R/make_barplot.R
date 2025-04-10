@@ -14,6 +14,7 @@
 #' @export
 #'
 #' @examples
+#'  \dontrun{
 #' # Example of creating a proportional stacked bar plot
 #' library(ggplot2)
 #' data <- data.frame(
@@ -22,16 +23,12 @@
 #' )
 #' make_barplot(data, x = "animal_type", x_name = "Animal Type",
 #'              class = "outcome_group", class_name = "Outcome Group")
-
-
-make_barplot <- function(dataset, x, x_name, class, class_name) {
-  # Code for generating the proportional stacked bar plot
-}
+#'}
 
 library(ggplot2)
 library(rlang)
 
-make_barplot <- function(dataset, x, x_name, class, class_name){
+make_barplot <- function(dataset, x, x_name, class, class_name) {
   # Check if dataset is a data frame
   if (is.null(dataset) || !is.data.frame(dataset)) {
     stop("Error: The dataset must be a data frame.")
@@ -55,13 +52,13 @@ make_barplot <- function(dataset, x, x_name, class, class_name){
     stop(paste("Error: The column", class, "must be a character or factor column (categorical variable)."))
   }
 
-  figure <- ggplot(dataset, aes(x = !!sym(x), fill = !!sym(class))) +
-    geom_bar(position = "fill") +
-    labs(x = x_name,
-         y = class_name) +
-    theme_minimal() +
-    scale_y_continuous(labels = scales::percent) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  figure <- ggplot2::ggplot(dataset, ggplot2::aes(x = !!rlang::sym(x), fill = !!rlang::sym(class))) +
+    ggplot2::geom_bar(position = "fill") +
+    ggplot2::labs(x = x_name,
+                  y = class_name) +
+    ggplot2::theme_minimal() +
+    ggplot2::scale_y_continuous(labels = scales::percent) +
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1))
 
   return(figure)
 }
