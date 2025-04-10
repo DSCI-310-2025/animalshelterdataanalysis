@@ -1,6 +1,7 @@
-#' Generate a Proportional Stacked Bar Plot showing the proportion of a categorical variable (`x`)
-#' grouped by another categorical variable (`class`). The plot uses relative
-#' proportions (i.e., stacked bars summing to 100%) and includes axis labels.
+#' @name make_barplot
+#' @title Generate a Proportional Stacked Bar Plot
+#' @description Generate a Proportional Stacked Bar Plot showing the proportion of a categorical variable (`x`) grouped by another categorical variable (`class`).
+#'   The plot uses relative proportions (i.e., stacked bars summing to 100%) and includes axis labels.
 #'
 #' @param dataset A data frame containing the data to be plotted.
 #' @param x A string specifying the name of the categorical variable to be plotted on the x-axis.
@@ -8,21 +9,24 @@
 #' @param class A string specifying the name of the grouping variable to fill the bars.
 #' @param class_name A string used as the label for the y-axis (often something like "Proportion" or the name of the group variable).
 #'
-#' @return A ggplot object showing the proportional stacked bar chart.
+#' @return A `ggplot` object showing the proportional stacked bar chart.
 #'
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' # Example of creating a proportional stacked bar plot
 #' library(ggplot2)
 #' data <- data.frame(
 #'   animal_type = c("Dog", "Dog", "Cat", "Cat", "Dog"),
 #'   outcome_group = c("Adopted", "Not Adopted", "Adopted", "Not Adopted", "Adopted")
 #' )
-#'
 #' make_barplot(data, x = "animal_type", x_name = "Animal Type",
 #'              class = "outcome_group", class_name = "Outcome Group")
-#' }
+
+
+make_barplot <- function(dataset, x, x_name, class, class_name) {
+  # Code for generating the proportional stacked bar plot
+}
 
 library(ggplot2)
 library(rlang)

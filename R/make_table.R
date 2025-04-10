@@ -1,15 +1,18 @@
-# @author Nolan Vibhakar
-# creates a table using the given data columns, then writes it to the given
-# folder as a csv file with the given name.
-#
-# @param data_cols -dataframe or individual column or columns of a dataframe
-# @param folder -the folder and path to write the file to
-# @param name -the name of the file to be written
-#
-# @return writes a new file
-#
-# @examples
-# make_table(data_cols, folder, name)
+#' @name make_table
+#' @title Creates a Table and Writes It to a CSV File
+#' @description Creates a table using the given data columns and writes it to the specified folder as a CSV file.
+#'
+#' @param data_cols A dataframe or individual column(s) from a dataframe to create the table.
+#' @param folder The folder and path where the CSV file will be saved.
+#' @param name The name of the CSV file to be written.
+#'
+#' @return Writes a new CSV file to the specified folder.
+#'
+#' @examples
+#' # Example usage:
+#' make_table(data_cols, folder = "path/to/folder", name = "output.csv")
+#' @export
+
 
 library(readr)
 

@@ -1,5 +1,4 @@
 library(dplyr)
-source(here::here("R", "make_table.R"))
 
 col <- list("a", "a")
 test_data1 <- tibble(class_labels = character(0), values = double(0))
