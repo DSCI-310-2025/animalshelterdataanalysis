@@ -3,10 +3,7 @@ Title: Animal Shelter Data Analysis
 Version: 0.0.0.9000
 Authors@R: 
     person("Audra", "Cornick", , "acorni02@ubc.ca", role = c("aut", "cre"))
-Description: Takes animal shelter data and recodes it to be adopted and not adopted,
-cleans it too look at specific factors that can be used to predict likelihood of being adopted. 
-Creates barplots and tables to represent the animal shelter data for exploratory data analysis purposes.
-Lastly, it can split the data so it is ready to use for any form of machine learning analysis.
+Description: Takes animal shelter data and recodes it to be adopted and not adopted, cleans it too look at specific factors that can be used to predict likelihood of being adopted. Creates barplots and tables to represent the animal shelter data for exploratory data analysis purposes. Lastly, it can split the data so it is ready to use for any form of machine learning analysis.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
