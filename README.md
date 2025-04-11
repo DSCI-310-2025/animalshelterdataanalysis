@@ -61,7 +61,8 @@ train_data <- split[[1]]
 test_data <- split[[2]]
 ```
 
-##Position in the R Package Ecosystem
+## Position in the R Package Ecosystem
+
 The `animalshelterdataanalysis` package is designed to streamline the data analysis workflow for animal shelter datasets. While many R packages like `dplyr`, `ggplot2`, and `tidyverse` offer powerful general tools for data manipulation and visualization, `animalshelterdataanalysis` provides specialized functions tailored specifically for shelter data.
 
 Key similar packages include:
